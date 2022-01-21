@@ -1,0 +1,51 @@
+
+<div class = "col">
+<div class="row">
+    <h3 class="text-center my-3">Search for Weather:</h3>
+    <form [formGroup]="weatherSearchForm" (ngSubmit)="sendToWeatherService(weatherSearchForm.value)">
+      <div class="form-group">
+        <input
+        class="form-control"
+        type="text"
+        id="weatherLocation"
+        aria-describedby="weatherLocation"
+        placeholder="Please write a Location"
+        formControlName="location"
+      />
+      </div>
+      <div class="text-center">
+        <br>
+        <button type="submit" class="btn btn-primary btn-rounded" action>
+          Search now
+        </button>
+      
+      </div>
+    </form>
+  </div>
+  <div class="row">
+    <h3 class="text-center my-3">Weather information:</h3>
+    
+      <p class="text-details">
+         City Name: {{this.weatherData.name}}
+      </p>
+      <p class="text-details">
+        Temperature of the day: {{ this.weatherData.main.temp }}&deg;
+      </p>
+      <div class="img">
+          <img [src]="getIcon()" width="100px" class="rounded mx-auto d-block"> 
+    </div>
+      <p class="text-details">
+        Max temperautre: {{this.weatherData.main.temp_max}}&deg;
+      </p>
+      <p class="text-details">
+        Min temperautre: {{this.weatherData.main.temp_min}}&deg;
+      </p>
+      <p class="text-details">
+        Humidity: {{this.weatherData.main.humidity}}&percnt;
+      </p>
+
+      
+  </div>
+</div>
+
+

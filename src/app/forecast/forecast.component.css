@@ -1,0 +1,32 @@
+.form-control
+{
+    width: 50%;
+    margin-left:30%;
+}
+
+.btn {
+    justify-content: center;
+
+}
+.day{
+    float: left;
+    justify-content: center;
+    display: block;
+}
+
+.text-details{
+    
+    justify-content: space-between;
+
+}
+.text-center {
+    color:lightskyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+
+
+}
+
+.table {
+    color:gray;
+}

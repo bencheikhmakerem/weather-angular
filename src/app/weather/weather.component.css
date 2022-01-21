@@ -1,0 +1,24 @@
+.form-control
+{
+    width: 50%;
+    margin-left:30%;
+}
+
+.text-center
+{
+    font-weight: bold;
+    color:lightskyblue;
+
+}
+
+.text-details
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: initial;
+    text-align: center;
+    color: gray;
+}
+
+.liste{
+    margin-left: 400px;
+}

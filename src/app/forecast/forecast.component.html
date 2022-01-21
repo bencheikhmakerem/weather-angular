@@ -1,0 +1,94 @@
+
+<!--<form class="SearchCity" [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+    <input type="text" class="cityName" formControlName="forecastCity" placeholder="Name of city">
+    <br>
+    <div class="buttonClass">
+    <button type ="submit" class="btn btn-primary btn-rounded">search</button>
+    </div>
+  </form>
+
+  <div class="day" *ngFor="let day of forecastCity">
+      <h3 >{{day.date | date :'MMMM d'}}</h3>
+      <div class="img">-->
+         <!--<img [src]="getIcon()" width="100px" class="rounded mx-auto d-block"> -->
+       <!--<img src="http://openweathermap.org/img/wn/{day.icon}@4x.png">-->
+    <!--  </div>
+
+ <div class ="temp">
+      <h3>{{day.temp_max}}&deg;</h3>
+      <h3>{{day.temp_min}}&deg;</h3>
+
+</div>
+</div>-->
+
+<div class = "col">
+    <div class="row">
+        <h3 class="text-center">Search for forecast weather</h3>
+        <form class="SearchCity" [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <input
+            class="form-control"
+            type="text"
+            id="weatherLocation"
+            aria-describedby="weatherLocation"
+            placeholder="Write a Location"
+            formControlName="forecastCity"
+          />
+          </div>
+          <div class="text-center">
+            <br>
+            <button type="submit" class="btn btn-primary btn-rounded" action>
+              Search now
+            </button><br>
+
+            </div>
+            </form><br>
+        </div>
+
+        <div class="row">
+            <h3 class="text-center">Weather information for the 5 next days:</h3>
+            <table class="table table-hover">
+                <thead class="thead">
+                    <tr>
+                        <th style="font-style: italic;color:lightskyblue">Date</th>
+                        <th style="font-style: italic;color:lightskyblue">temp</th>
+                        <th></th>
+                        <th style="font-style: italic;color:lightskyblue">TempMax</th>
+                        <th style="font-style: italic;color:lightskyblue">TempMin</th>
+                        
+
+                    </tr>
+                </thead>
+               
+               <!-- <div class="day" *ngFor="let day of forecastCity">-->
+
+                <tbody *ngFor="let day of forecastCity">
+                    <tr>
+                        <td class="text-details" class="row" style="font-weight:bold;">
+                           {{day.date | date :'MMMMd'}}
+                        </td> 
+                        <td class="text-details">
+                            {{day.temp_jour}}&deg;
+                        </td>
+                        <td>
+                            <!--<img src="http://openweathermap.org/img/wn/${day.icon}@4x.png">-->
+                            <!--<p>{{day.icon}}</p>-->
+                            <img [src]="getIcon(day.icon)" width="100px" class="rounded mx-auto d-block">
+
+                        </td>
+                        <td class="text-details">
+                            {{day.temp_max}}&deg;
+                        </td>
+                        <td class="text-details">
+                            {{day.temp_min}}&deg;
+                        </td>
+                       
+                        
+                    </tr>
+                </tbody>
+               
+            
+
+            
+            
+              
